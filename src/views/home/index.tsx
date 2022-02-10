@@ -57,7 +57,6 @@ const Home = () => {
   }, []);
 
   useInterval(3000, () => {
-    console.log('sendLoopIndex', sendLoopIndex)
     if (sendLoopIndex >= bridgeSends.length - 1) {
       setSendLoopIndex(0)
     } else {
@@ -67,7 +66,6 @@ const Home = () => {
     setTimeout(() => {
       setSendAnimate("")
     }, 1000)
-    console.log('toLoopIndex', toLoopIndex)
     if (toLoopIndex >= bridgeTos.length - 1) {
       setToLoopIndex(0)
     } else {
@@ -94,26 +92,22 @@ const Home = () => {
     }
     const bridgeView: any = document.getElementsByClassName("bridgeView")[0]
     if (pageEnds[1] && bridgeView && bridgeView.offsetTop && scrollTop >= bridgeView.offsetTop - 800) {
-      console.log(bridgeView.offsetTop)
       setBridgeViewAnimate('animate__animated animate__fadeInUp')
       pageEnds[1] = 0
     }
     const teleswap: any = document.getElementsByClassName("teleswap")[0]
     if (pageEnds[2] && teleswap && teleswap.offsetTop && scrollTop >= teleswap.offsetTop - 800) {
-      console.log(teleswap.offsetTop)
       setTeleswapAnimate('animate__animated animate__fadeInUp')
       pageEnds[2] = 0
     }
     const metaView: any = document.getElementsByClassName("metaView")[0]
     if (pageEnds[3] && metaView && metaView.offsetTop && scrollTop >= metaView.offsetTop - 800) {
-      console.log(metaView.offsetTop)
       setMetaAnimate('animate__animated animate__fadeInUp')
       pageEnds[3] = 0
     }
 
     const roadmapLineView: any = document.getElementsByClassName("roadmapLineView")[0]
     if (pageEnds[4] && roadmapLineView && roadmapLineView.offsetTop && scrollTop >= roadmapLineView.offsetTop - 800) {
-      console.log(roadmapLineView.offsetTop)
       setRoadmapLineViewAnimate('animate__animated animate__fadeInUp')
       pageEnds[4] = 0
     }
