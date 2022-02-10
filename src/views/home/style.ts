@@ -237,6 +237,12 @@ export const HomeStyled = styled.div`
             opacity: 0.8;
             margin-left: 0.6rem;
         }
+        .chainName {
+            font-weight: 600;
+            font-size: 2.4rem;
+            line-height: 2.7rem;
+            color: #FFFFFF;
+        }
         .sendToView {
             .sendToImg {
                 display: inline-block;
@@ -253,18 +259,13 @@ export const HomeStyled = styled.div`
                 margin-right: 1.3rem;
             }
             .sendImg {
-                width: 4rem;
-                height: 4rem;
+                width: 5rem;
+                height: 5rem;
             }
-            .chainName {
-                font-weight: 600;
-                font-size: 3.6rem;
-                line-height: 2.7rem;
-                color: #FFFFFF;
-            }
+            
             .toImg {
-                width: 4rem;
-                height: 4rem;
+                width: 5.6rem;
+                height: 5.6rem;
             }
         }
     }
