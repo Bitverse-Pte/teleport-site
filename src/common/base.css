@@ -1,0 +1,429 @@
+html body {
+    /* font-family: 'Poppins'; */
+    font-style: normal;
+    font-weight: normal;
+    box-sizing: border-box;
+    color: #999999;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    background-color: rgba(1,3,2,1);
+}
+
+/* @font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Light.ttf');
+} */
+
+
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 3085910 */
+    src: url('//at.alicdn.com/t/font_3085910_26g2n2idvkx.woff2?t=1640685340944') format('woff2'),
+        url('//at.alicdn.com/t/font_3085910_26g2n2idvkx.woff?t=1640685340944') format('woff'),
+        url('//at.alicdn.com/t/font_3085910_26g2n2idvkx.ttf?t=1640685340944') format('truetype');
+}
+
+/* <i className="iconfont">&#xeaf2;</i> */
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.dtest {
+    border: 1px solid red;
+}
+
+.ddspInlineBlock {
+    display: inline-block;
+}
+
+.dclearBoth:after {
+    content: '';
+    display: block;
+    clear: both;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.dfl {
+    float: left;
+}
+
+.dfr {
+    float: right;
+}
+
+
+.dfontSize20 {
+    font-size: 2rem;
+}
+
+.dfontSize25 {
+    font-size: 2.5rem;
+}
+
+.dfontSize30 {
+    font-size: 3rem;
+}
+
+.dpd_0_5 {
+    padding: 0 0.5rem !important;
+}
+
+.dpd_0_10 {
+    padding: 0 1rem !important;
+}
+
+.dmt30 {
+    margin-top: 3rem !important;
+}
+
+.dmt50 {
+    margin-top: 5rem !important;
+}
+
+.dmb5 {
+    margin-bottom: 0.5rem !important;
+}
+
+.dmb10 {
+    margin-bottom: 1rem !important;
+}
+
+.dmb15 {
+    margin-bottom: 1.5rem !important;
+}
+
+.dmb20 {
+    margin-bottom: 2rem !important;
+}
+
+.dmb30 {
+    margin-bottom: 3rem !important;
+}
+
+.dmb35 {
+    margin-bottom: 3.5rem !important;
+}
+
+.dmb40 {
+    margin-bottom: 4rem !important;
+}
+
+.dmb50 {
+    margin-bottom: 5rem !important;
+}
+
+.dmb90 {
+    margin-bottom: 9rem !important;
+}
+
+.dml10 {
+    margin-left: 1rem !important;
+}
+
+.dml15 {
+    margin-left: 1.5rem !important;
+}
+
+.dml20 {
+    margin-left: 2rem !important;
+}
+
+.dml30 {
+    margin-left: 3rem !important;
+}
+
+.dml60 {
+    margin-left: 6rem !important;
+}
+
+.dmr5 {
+    margin-right: 0.5rem !important;
+}
+
+.dmr10 {
+    margin-right: 1rem !important;
+}
+
+.dmr15 {
+    margin-right: 1.5rem !important;
+}
+
+.dmr20 {
+    margin-right: 2rem !important;
+}
+
+.dmr30 {
+    margin-right: 3rem !important;
+}
+
+.dflexRowStartCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dflexRowStartStart {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.dflexRowEndCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.dflexRowCenterCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.dflexRowBetweenCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dflexRowAroundCenter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.dflexColumnCenterCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dflexColumnStartCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dflexColumnCenterStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.dflexColumnStartStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.dflexColumnEndStart {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+}
+.dflexColumnEndCenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.dflex1 {
+    flex: 1;
+}
+
+.dflex2 {
+    flex: 2;
+}
+
+.dflex3 {
+    flex: 3;
+}
+
+.dflex4 {
+    flex: 4;
+}
+
+.dtal {
+    text-align: left !important;
+}
+
+.dtac {
+    text-align: center !important;
+}
+
+.dtar {
+    text-align: right !important;
+}
+
+
+.dcp {
+    cursor: pointer;
+}
+
+.dcp:hover {
+    color: red;
+    border: 1px solid red;
+}
+
+
+.dpdtop30 {
+    padding-top: 3rem;
+}
+
+.dpdlr30 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+
+
+.dfs16 {
+    font-size: 1.6rem;
+}
+
+.dfs20 {
+    font-size: 2rem;
+}
+
+.dfs36 {
+    font-size: 3.6rem;
+}
+
+.dcl999999 {
+    color: #999999;
+}
+
+.dcl000000 {
+    color: #000000;
+}
+
+
+.dh80 {
+    height: 8rem !important;
+}
+
+.dh110 {
+    height: 11rem !important;
+}
+
+
+.dbd1Color142 {
+    border: 1px solid rgba(142, 142, 142, 1);
+    border-radius: 1rem;
+}
+
+.dbdRed {
+    border: 1px solid red;
+}
+
+.dbdGreen {
+    border: 1px solid green;
+}
+
+
+.centerView {
+    width: 144rem !important;
+    margin: 0 auto !important;
+}
+
+
+.contactItem {
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    line-height: 7rem;
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+.contactItem img {
+    width: 3.8rem;
+    height: auto;
+}
+
+.contactItem:hover {
+    border: 1px solid #00C6A9;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 6px 1px #00C6A9;
+}
+
+.communityView {
+    width: 18.6 rem;
+    box-sizing: border-box;
+    background: #212525;
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding-bottom: 2.6rem;
+}
+
+.communityView .arrow {
+    width: 4.8rem;
+    height: auto;
+    position: relative;
+    top: -2rem;
+    left: 2rem;
+}
+
+.communityView .communityViewItem {
+    height: 5.6rem;
+    line-height: 5rem;
+    padding: 0 2.4rem;
+}
+
+.communityViewItem:hover {
+    background: rgba(49, 54, 54, 1);
+}
+
+.communityView img {
+    width: 2.4rem;
+    height: auto;
+    margin-right: 1.2rem;
+}
+
+.communityView .media {
+    font-size: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.dropdown_arrow {
+    display: inline-block;
+    width: 10px;
+    height: auto;
+    margin-left: 1.2rem;
+}
+
+.addView {
+    /* width: 1.4rem;
+    height: .3rem;
+    color: rgba(31,230,169,1);
+    border-radius: 15px; */
+    display: inline-block;
+    width: 1.4rem;
+    height: 1.4rem;
+    border: 2px solid #00C6A9;
+    border-radius: 50%;
+}
