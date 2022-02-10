@@ -18,18 +18,19 @@ import { useInterval } from 'hooks/timer';
 import sendToSvg from 'assets/imgs/sendTo.svg'
 import { setTimeout } from 'timers';
 
-import AVALANCHE_icon from 'assets/imgs/AVALANCHE.png';
-import BSC_icon from 'assets/imgs/BSCICON.png';
-import BTC_icon from 'assets/imgs/BTC.png';
-import COSMOS_icon from 'assets/imgs/COSMOS.png';
-import DAI_icon from 'assets/imgs/DAI.png';
-import ETH_icon from 'assets/imgs/ETHICON.png';
-import POLYGON_icon from 'assets/imgs/POLYGON.png';
-import SOLANA_icon from 'assets/imgs/SOLANA.png';
-import TERRA_icon from 'assets/imgs/TERRA.png';
-import USDC_icon from 'assets/imgs/USDC.png';
-import USDT_icon from 'assets/imgs/USDT.png';
-import UST_icon from 'assets/imgs/UST.png';
+import BTC_icon from 'assets/imgs/token/BTC.png';
+import ETH_icon from 'assets/imgs/token/ETH.png';
+import USDC_icon from 'assets/imgs/token/USDC.png';
+import USDT_icon from 'assets/imgs/token/USDT.png';
+import DAI_icon from 'assets/imgs/token/DAI.png';
+
+import AVALANCHE_icon from 'assets/imgs/chain/AVALANCHE.png';
+import BSC_icon from 'assets/imgs/chain/BSC.png';
+import COSMOS_icon from 'assets/imgs/chain/COSMOS.png';
+import POLYGON_icon from 'assets/imgs/chain/POLYGON.png';
+import SOLANA_icon from 'assets/imgs/chain/SOLANA.png';
+import TERRA_icon from 'assets/imgs/chain/TERRA.png';
+
 
 const Home = () => {
   const [aboutViewAnimate, setaboutViewAnimate] = useState("");
@@ -40,8 +41,8 @@ const Home = () => {
   const [sendAnimate, setSendAnimate] = useState("");
   const [toAnimate, setToAnimate] = useState("");
   const [headViewMove, setHeadViewMove] = useState("");
-  const bridgeSends = ["BTC", "ETH", "USDT", "USDC", "DAI", "UST"]
-  const sendIcons = [BTC_icon, ETH_icon, USDT_icon, USDC_icon, DAI_icon, UST_icon]
+  const bridgeSends = ["BTC", "ETH", "USDT", "USDC", "DAI"]
+  const sendIcons = [BTC_icon, ETH_icon, USDT_icon, USDC_icon, DAI_icon]
   const bridgeTos = ["Ethereum", "BSC", "Polygon", "Avalanche", "Cosmos", "Solana", "Terra"]
   const toIcons = [ETH_icon, BSC_icon, POLYGON_icon, AVALANCHE_icon, COSMOS_icon, SOLANA_icon, TERRA_icon]
   let [sendLoopIndex, setSendLoopIndex] = useState(0);
