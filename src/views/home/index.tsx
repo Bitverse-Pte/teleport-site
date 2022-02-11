@@ -397,7 +397,7 @@ const Home = () => {
     </div>
     <div className="bottomView animate__animated animate__fadeInUp">
       <div className="centerView dflexRowBetweenCenter">
-        <div className="right">©2021 Teleport Network. All rights reserved.</div>
+        <div className="right">©2022 Teleport Network. All rights reserved.</div>
         {/* <div>© 2019 - 2020 Byvrese. All Rights Reserved.</div> */}
         <div className="contactView">
           <a className="contactItem topMove" target="_blank" href="https://twitter.com/TeleportChain">
