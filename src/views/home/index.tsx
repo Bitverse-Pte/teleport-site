@@ -123,14 +123,14 @@ const Home = () => {
       <img className="arrow" src={top_arrow} alt="" />
       <div className="communityViewItem" key="0">
         {/* <img src={nav_twitter} alt="" /> */}
-        <a className="media" target="_blank" href="https://chain-docs.teleport.network">Teleport</a>
+        <a className="media" target="_blank" href="https://docs.teleport.network">Teleport</a>
       </div>
       {/* <div className="communityViewItem" key="1">
         <a className="media" target="_blank" href="https://bridge.qa.davionlabs.com">bridge</a>
       </div> */}
       <div className="communityViewItem" key="2">
         {/* <img src={nav_discord} alt="" /> */}
-        <a className="media" target="_blank" href="https://docs.teleport.network">Chain</a>
+        <a className="media" target="_blank" href="https://chain-docs.teleport.network">Chain</a>
       </div>
     </div>
   );
@@ -234,7 +234,7 @@ const Home = () => {
         </div>
         <div>
           {/* <span className="bannerBtn1 topMove">Docs</span> */}
-          <a className="bannerBtn2 topMove" target="_blank" href="https://chain-docs.teleport.network">Docs</a>
+          <a className="bannerBtn2 topMove" target="_blank" href="https://docs.teleport.network">Docs</a>
         </div>
 
         <div className="contactView">
