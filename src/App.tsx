@@ -1,18 +1,18 @@
 import React, { memo, Suspense } from 'react';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config'
 import routes from './routes'
 import { AppStyled } from './App.styled'
 
 function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <AppStyled>
-        <Suspense fallback={<div>page loading</div>}>
+        <Suspense fallback={<div></div>}>
           {renderRoutes(routes)}
         </Suspense>
       </AppStyled>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
