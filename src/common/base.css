@@ -348,6 +348,11 @@ html body {
     margin: 0 auto !important;
 }
 
+.centerViewMobile {
+    width: 34.3rem !important;
+    margin: 0 auto !important;
+}
+
 
 .contactItem {
     display: inline-block;
@@ -439,4 +444,36 @@ html body {
     height: 1.4rem;
     border: 2px solid #00C6A9;
     border-radius: 50%;
+}
+
+
+.communityViewMobile {
+    width: 15 rem;
+    box-sizing: border-box;
+    background: #212525;
+    border-radius: 5px;
+    margin-top: 2rem;
+    padding-bottom: 2.6rem;
+}
+.communityViewMobile .communityViewItem {
+    height: 4.6rem;
+    line-height: 5rem;
+    padding: 0 2.4rem;
+}
+.communityViewMobile img {
+    width: 1.6rem;
+    height: auto;
+    margin-right: 1.2rem;
+}
+.communityViewMobile .media {
+    font-size: 1.6rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+.communityViewMobile .arrow {
+    width: 4.2rem;
+    height: auto;
+    position: relative;
+    top: -2rem;
+    left: 2rem;
 }
