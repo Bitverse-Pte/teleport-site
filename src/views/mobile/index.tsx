@@ -130,7 +130,7 @@ const Mobile = () => {
             <div className="communityViewItem" key="3">
                 {/* <img src={nav_explore} alt="" /> */}
                 <img src={nav_doc} alt="" />
-                <a className="media" target="_blank" href="https://blockscout.qa.davionlabs.com">Explorer</a>
+                <a className="media" target="_blank" href="https://evm-explorer.testnet.teleport.network">Explorer</a>
             </div>
         </div>
     );
