@@ -139,14 +139,16 @@ const Teleport = () => {
       <img className="arrow" src={top_arrow} alt="" />
       <div className="communityViewItem" key="0">
         {/* <img src={nav_twitter} alt="" /> */}
-        <a className="media" target="_blank" href="https://blockscout.qa.davionlabs.com">EVM</a>
+        {/* https://blockscout.qa.davionlabs.com */}
+        <a className="media" target="_blank" href="https://evm-explorer.testnet.teleport.network">EVM</a>
       </div>
       {/* <div className="communityViewItem" key="1">
         <a className="media" target="_blank" href="https://bridge.qa.davionlabs.com">bridge</a>
       </div> */}
       <div className="communityViewItem" key="2">
         {/* <img src={nav_discord} alt="" /> */}
-        <a className="media" target="_blank" href="https://explorer.qa.davionlabs.com">Tendermint</a>
+        {/* https://explorer.qa.davionlabs.com */}
+        <a className="media" target="_blank" href="https://explorer.testnet.teleport.network">Tendermint</a>
       </div>
     </div>
   );
