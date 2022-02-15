@@ -199,14 +199,14 @@ const Teleport = () => {
               <img className="dropdown_arrow" src={dropdown_arrow} alt="" />
             </a>
           </Dropdown> */}
-          {/* <Dropdown className="dropdown" overlay={exploreMenu}
+          <Dropdown className="dropdown" overlay={exploreMenu}
           >
             <a className="ant-dropdown-link"
             >
               Explorer
               <img className="dropdown_arrow" src={dropdown_arrow} alt="" />
             </a>
-          </Dropdown> */}
+          </Dropdown>
           <Dropdown className="dropdown" overlay={menu}
           // trigger={['click']}
           >
