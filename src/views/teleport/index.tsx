@@ -150,6 +150,22 @@ const Teleport = () => {
       </div>
     </div>
   );
+  const fauctMenu = (
+    <div className="communityView">
+      <img className="arrow" src={top_arrow} alt="" />
+      <div className="communityViewItem" key="0">
+        {/* <img src={nav_twitter} alt="" /> */}
+        <a className="media" target="_blank" href="https://rinkeby-erc20-faucet.testnet.teleport.network">Rinkeby</a>
+      </div>
+      {/* <div className="communityViewItem" key="1">
+        <a className="media" target="_blank" href="https://bridge.qa.davionlabs.com">bridge</a>
+      </div> */}
+      <div className="communityViewItem" key="2">
+        {/* <img src={nav_discord} alt="" /> */}
+        <a className="media" target="_blank" href="https://bsctest-erc20-faucet.testnet.teleport.network">BSC Testnet</a>
+      </div>
+    </div>
+  );
   const menu = (
     <div className="communityView">
       <img className="arrow" src={top_arrow} alt="" />
@@ -191,14 +207,14 @@ const Teleport = () => {
               <img className="dropdown_arrow" src={dropdown_arrow} alt="" />
             </a>
           </Dropdown>
-          {/* <Dropdown className="dropdown" overlay={menu}
+          <Dropdown className="dropdown" overlay={fauctMenu}
           >
             <a className="ant-dropdown-link"
             >
               Faucet
               <img className="dropdown_arrow" src={dropdown_arrow} alt="" />
             </a>
-          </Dropdown> */}
+          </Dropdown>
           <Dropdown className="dropdown" overlay={exploreMenu}
           >
             <a className="ant-dropdown-link"

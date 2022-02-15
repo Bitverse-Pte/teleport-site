@@ -7,6 +7,8 @@ import nav_discord from 'assets/imgs/nav_discord.png'
 import nav_medium from 'assets/imgs/nav_medium.png'
 import nav_twitter from 'assets/imgs/nav_twitter.png'
 import nav_doc from 'assets/imgs/mobile/nav_doc.png'
+// import nav_explore from 'assets/imgs/mobile/nav_explore.png'
+
 import { Dropdown } from 'antd';
 import { useInterval } from "hooks/timer"
 import sendToSvg from 'assets/imgs/sendTo.svg'
@@ -124,6 +126,11 @@ const Mobile = () => {
             <div className="communityViewItem" key="3">
                 <img src={nav_doc} alt="" />
                 <a className="media" target="_blank" href="https://docs.teleport.network">Doc</a>
+            </div>
+            <div className="communityViewItem" key="3">
+                {/* <img src={nav_explore} alt="" /> */}
+                <img src={nav_doc} alt="" />
+                <a className="media" target="_blank" href="https://blockscout.qa.davionlabs.com">Explorer</a>
             </div>
         </div>
     );
