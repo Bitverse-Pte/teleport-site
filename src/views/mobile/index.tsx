@@ -44,10 +44,10 @@ const Mobile = () => {
         // sensorHelper.track('autoTrack2222')
         window.addEventListener('scroll', handleScroll)
         return () => {
-          window.removeEventListener('scroll', handleScroll)
+            window.removeEventListener('scroll', handleScroll)
         };
-      }, []);
-    
+    }, []);
+
     useInterval(3000, () => {
         if (sendLoopIndex >= bridgeSends.length - 1) {
             setSendLoopIndex(0)
@@ -71,7 +71,7 @@ const Mobile = () => {
     });
     const handleScroll = (e: any) => {
         let scrollTop = document.documentElement.scrollTop;
-       
+
         const bridgeView: any = document.getElementsByClassName("bridgeView")[0]
         if (pageEnds[1] && bridgeView && bridgeView.offsetTop && scrollTop >= bridgeView.offsetTop - 800) {
             setBridgeViewAnimate('animate__animated animate__fadeInUp')
@@ -142,6 +142,7 @@ const Mobile = () => {
                     <img className="logoImg" src={logo} alt="" />
                 </div>
                 <div className="rightNav">
+                    <a className="launchApp dmr15" target="_blank" href="https://bridge.testnet.teleport.network/">Launch App</a>
                     <Dropdown className="dropdownView dflexRowCenterCenter" overlay={menu}
                         trigger={['click']}
                     >
@@ -153,7 +154,6 @@ const Mobile = () => {
                             <span className="menuSpan"></span>
                         </a>
                     </Dropdown>
-                    {/* <button className="launchApp dmr15">Launch App</button> */}
                 </div>
             </div>
         </div>
@@ -204,7 +204,7 @@ const Mobile = () => {
                 </div>
             </div>
         </div>
-        <div className={["bridgeView",bridgeViewAnimate].join(" ")}>
+        <div className={["bridgeView", bridgeViewAnimate].join(" ")}>
             <div className="centerViewMobile dflexColumnStartCenter">
                 <div className="title">
                     <div>Teleport Bridge</div>

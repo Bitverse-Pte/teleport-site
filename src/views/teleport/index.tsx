@@ -237,7 +237,7 @@ const Teleport = () => {
           </Dropdown>
           {/* <span className="doc">Docs</span> */}
           {/* <span className="languages">Languages</span> */}
-          {/* <button className="launchApp">Launch App</button> */}
+          <a className="launchApp" target="_blank" href="https://bridge.testnet.teleport.network/">Launch App</a>
         </div>
       </div>
     </div>
