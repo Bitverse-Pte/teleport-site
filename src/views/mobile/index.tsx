@@ -191,7 +191,7 @@ const Mobile = () => {
                             <span className="round round2"></span>
                         </div>
                         <div className="liTitle">Alternative Cross-chain Approach</div>
-                        <div className="liSubtitle">State Relay - Trustless <p>Oracle TSS - Cost effective</p></div>
+                        <div className="liSubtitle">Light Client - Trustless <p>Oracle TSS - Cost effective</p></div>
                     </div>
                     <div className="cell dflex1 topMoveMobile">
                         <div>
@@ -267,8 +267,8 @@ const Mobile = () => {
                                 <div className="title">2022 Q1</div>
                                 <div className="desc">
                                     <div><span className="roadmapRound"></span> Testnet launch</div>
-                                    <div><span className="roadmapRound"></span> Cross-chain transfer &</div>
-                                    <div><span className="roadmapRoundNo"></span> contract call via IBC & TSS</div>
+                                    <div><span className="roadmapRound"></span> Cross-chain transfer & contract</div>
+                                    <div><span className="roadmapRoundNo"></span> call via light client or TSS</div>
                                 </div>
                             </div>
                             <div className="roadItemCtt roadItemCtt3">
@@ -294,7 +294,8 @@ const Mobile = () => {
                                 <div className="desc">
                                     <div><span className="roadmapRound"></span> TSS Node on-chain</div>
                                     <div><span className="roadmapRoundNo"></span> governance</div>
-                                    <div><span className="roadmapRound"></span> ZK cross-chain relay</div>
+                                    <div><span className="roadmapRound"></span>Multi-chain Namespace & </div>
+                                    <div><span className="roadmapRoundNo"></span> Identity</div>
                                 </div>
                             </div>
                         </div>
