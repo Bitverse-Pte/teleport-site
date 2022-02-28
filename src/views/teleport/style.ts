@@ -56,7 +56,8 @@ export const HomeStyled = styled.div`
             .launchApp {
                 display: inline-block;
                 text-align: center;
-                width: 17.7rem;
+                padding: 0 2.45rem;
+                height: 4.7rem;
                 line-height: 4.7rem;
                 background: #00C6A9;
                 border-radius: 8px;
