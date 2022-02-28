@@ -2,11 +2,13 @@ import React, { memo, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
 const Teleport = React.lazy(() => import("views/teleport"));
 const Mobile = React.lazy(() => import("views/mobile"));
+import skynet from 'utils/skynet';
 
-// import sensorHelper from 'sensors';
 const Home = () => {
   const history = useHistory();
   const [isMobile, setIsMobile] = useState(false)
+  skynet.start();
+
   useEffect(() => {
     if (window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) {
       setIsMobile(true)

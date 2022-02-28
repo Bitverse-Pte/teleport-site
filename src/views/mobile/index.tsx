@@ -26,7 +26,12 @@ import COSMOS_icon from 'assets/imgs/chain/COSMOS.png';
 import POLYGON_icon from 'assets/imgs/chain/POLYGON.png';
 import SOLANA_icon from 'assets/imgs/chain/SOLANA.png';
 import TERRA_icon from 'assets/imgs/chain/TERRA.png';
+
+import skynet from 'utils/skynet';
+const { sensors } = skynet;
+
 const Mobile = () => {
+    let swap_hub_roadMap = [0, 0, 0]
     const [bridgeViewAnimate, setBridgeViewAnimate] = useState("");
     const [teleswapAnimate, setTeleswapAnimate] = useState("");
     const [metaAnimate, setMetaAnimate] = useState("");
@@ -82,17 +87,35 @@ const Mobile = () => {
             setTeleswapAnimate('animate__animated animate__fadeInUp')
             pageEnds[2] = 0
         }
+        if (!swap_hub_roadMap[0] && scrollTop >= teleswap.offsetTop - 800) {
+            sensors.track('Teleswap_view', {
+              page: 'home',
+            });
+            swap_hub_roadMap[0] = 1
+          }
         const metaView: any = document.getElementsByClassName("metaView")[0]
         if (pageEnds[3] && metaView && metaView.offsetTop && scrollTop >= metaView.offsetTop - 800) {
             setMetaAnimate('animate__animated animate__fadeInUp')
             pageEnds[3] = 0
         }
+        if (!swap_hub_roadMap[1] && scrollTop >= metaView.offsetTop - 800) {
+            sensors.track('MetaverseHub_view', {
+              page: 'home',
+            });
+            swap_hub_roadMap[1] = 1
+          }
 
         const roadmapLineView: any = document.getElementsByClassName("roadmapLineView")[0]
         if (pageEnds[4] && roadmapLineView && roadmapLineView.offsetTop && scrollTop >= roadmapLineView.offsetTop - 800) {
             setRoadmapLineViewAnimate('animate__animated animate__fadeInUp')
             pageEnds[4] = 0
         }
+        if (!swap_hub_roadMap[2] && scrollTop >= roadmapLineView.offsetTop - 800) {
+            sensors.track('Roadmap_view', {
+              page: 'home',
+            });
+            swap_hub_roadMap[2] = 1
+          }
         const bottomView: any = document.getElementsByClassName("bottomView")[0]
         if (bottomView && bottomView.offsetTop && scrollTop >= bottomView.offsetTop) {
             setBridgeViewAnimate('')
@@ -102,6 +125,43 @@ const Mobile = () => {
             // window.removeEventListener('scroll', handleScroll)
         }
     }
+
+    const clickCommunityTwitter = () => {
+        sensors.track('community_Twitter_click', {
+            page: 'home',
+        });
+        window.open("https://twitter.com/TeleportChain", "_blank");
+    }
+    const clickCommunityTelegram = () => {
+        sensors.track('community_Telegram_click', {
+            page: 'home',
+        });
+        window.open("https://t.me/TeleportNetwork", "_blank");
+    }
+    const clickCommunityDiscord = () => {
+        sensors.track('community_Discord_click', {
+            page: 'home',
+        });
+        window.open("https://discord.gg/5YQtRDF4Rh", "_blank");
+    }
+    const clickCommunityMedium = () => {
+        sensors.track('community_Medium_click', {
+            page: 'home',
+        });
+        window.open("https://medium.com/@TeleportNetwork", "_blank");
+    }
+    const clickDocTeleport = () => {
+        sensors.track('doc_teleport_click', {
+            page: 'home',
+        });
+        window.open("https://docs.teleport.network", "_blank");
+    }
+    const clickExploreEvm = () => {
+        sensors.track('explore_evm_click', {
+            page: 'home',
+        });
+        window.open("https://evm-explorer.testnet.teleport.network", "_blank");
+    }
     const menu = (
         <div className="communityViewMobile">
             <div className="dflexRowEndCenter dmr20">
@@ -109,30 +169,30 @@ const Mobile = () => {
             </div>
             <div className="communityViewItem" key="0">
                 <img src={nav_twitter} alt="" />
-                <a className="media" target="_blank" href="https://twitter.com/TeleportChain">Twitter</a>
+                <a className="media" onClick={() => clickCommunityTwitter()}>Twitter</a>
             </div>
             <div className="communityViewItem" key="1">
                 <img src={nav_telegram} alt="" />
-                <a className="media" target="_blank" href="https://t.me/TeleportNetwork">Telegram</a>
+                <a className="media" onClick={() => clickCommunityTelegram()}>Telegram</a>
             </div>
             <div className="communityViewItem" key="2">
                 <img src={nav_discord} alt="" />
-                <a className="media" target="_blank" href="https://discord.gg/5YQtRDF4Rh">Discord</a>
+                <a className="media" onClick={() => clickCommunityDiscord()}>Discord</a>
             </div>
             <div className="communityViewItem" key="3">
                 <img src={nav_medium} alt="" />
-                <a className="media" target="_blank" href="https://medium.com/@TeleportNetwork">Medium</a>
+                <a className="media" onClick={() => clickCommunityMedium()}>Medium</a>
             </div>
             <div className="communityViewItem" key="3">
                 <img src={nav_doc} alt="" />
-                <a className="media" target="_blank" href="https://docs.teleport.network">Doc</a>
+                <a className="media" onClick={() => clickDocTeleport()}>Doc</a>
             </div>
             <div className="communityViewItem" key="3">
                 {/* <img src={nav_explore} alt="" /> */}
                 <img src={nav_doc} alt="" />
-                <a className="media" target="_blank" href="https://evm-explorer.testnet.teleport.network">Explorer</a>
+                <a className="media" onClick={() => clickExploreEvm()}>Explorer</a>
             </div>
-        </div>
+        </div >
     );
     return <MobileStyled>
         <div className={["m_headView"].join(" ")}>
