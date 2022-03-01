@@ -3,8 +3,14 @@ import "common/reset.css"
 import "common/base.css"
 import "common/animation.css"
 import "antd/dist/antd.css"
+import { useEffect } from "react"
 
 function MyApp({ Component, pageProps }) {
+	useEffect(() => {
+		require("common/rem.js")
+		return () => {}
+	})
+
 	return (
 		<>
 			<Head>

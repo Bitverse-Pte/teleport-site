@@ -44,7 +44,6 @@ const Mobile = () => {
 	useEffect(() => {
 		const skynet = require("utils/skynet")
 		sensorsClient = skynet.default.sensors
-		require("common/rem.js")
 
 		window.addEventListener("scroll", handleScroll)
 		return () => {
