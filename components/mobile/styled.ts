@@ -279,7 +279,7 @@ export const MobileStyled = styled.div`
 		width: 100vw;
 		height: 7rem;
 		background-image: url("/imgs/mobile/roadmap.svg");
-		background-size: 40% 100%; 
+		background-size: 40% 100%;
 		background-repeat: no-repeat;
 		.roadmapImg {
 			display: inline-block;
