@@ -4,10 +4,9 @@ const Teleport = dynamic(import("../components/teleport"))
 const Mobile = dynamic(import("../components/mobile"))
 
 export default function Home() {
-	const [showMobile, setShowMobile] = useState(false)
-	const [showTeleport, setShowTeleport] = useState(false)
+	const [showPc, setShowPc] = useState(true)
+	const [showLoading, setShowLoading] = useState(true)
 	const init = async () => {
-		//把方法变成异步模式
 		const skynet = await import("utils/skynet")
 		skynet.default.start()
 	}
@@ -20,23 +19,33 @@ export default function Home() {
 			)
 		) {
 			setTimeout(() => {
-				setShowMobile(true)
-				setShowTeleport(false)
+				setShowPc(false)
+				setShowLoading(false)
 			}, 1);
 		} else {
 			setTimeout(() => {
-				setShowTeleport(true)
-				setShowMobile(false)
+				setShowPc(true)
+				setShowLoading(false)
 			}, 1);
 		}
 		init().then()
 		return () => { }
-	})
+	},[])
 
 	return (
 		<>
-			{showMobile && <Mobile></Mobile>}
-			{showTeleport && <Teleport></Teleport>}
+			{
+				showLoading && <div style={{
+					width: "100%",
+					height: "100%",
+					backgroundColor: "black",
+					position: "fixed",
+					zIndex: 10000
+				}}>
+				</div>
+			}
+			{!showPc && <Mobile></Mobile>}
+			{showPc && <Teleport></Teleport>}
 		</>
 	)
 }
