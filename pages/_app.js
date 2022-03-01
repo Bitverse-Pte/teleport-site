@@ -29,6 +29,7 @@ function MyApp({ Component, pageProps }) {
 					name="google-site-verification"
 					content="2OFRwzykwoKPyUADzZ9JCA4jED2l5zZy31Q5lFsaHes"
 				/>
+				<meta name="google-site-verification" content="lix4hrWneSKRDr7ooDLj1wz3tuRDo1Zitxm_WAJZ8nY" />
 				<title>Teleport</title>
 				<link rel="icon" href="/teleport.png" />
 			</Head>
