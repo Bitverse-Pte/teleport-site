@@ -12,16 +12,16 @@ function MyApp({ Component, pageProps }) {
 				<meta name="title" content="Teleport Network" />
 				<meta
 					name="keywords"
-					content="Teleport,Evmos,Teleport Network,Cross-chain Bridge,Multi-Chain,Token Transfer"
+					content="Teleport,Evmos,Teleport Network,Cross-chain Bridge,Multi-Chain,Token Transfer,blockchain, crypto, web3, bridge, cross-chain, ethereum, bitcoin, cosmos, wallet, crypto wallet"
 				/>
 				<meta
 					name="description"
-					content="Teleport,Evmos,Teleport Network,Cross-chain Bridge,Multi-Chain,Token Transfer"
+					content="Teleport,Evmos,Teleport Network,Cross-chain Bridge,Multi-Chain,Token Transfer,blockchain, crypto, web3, bridge, cross-chain, ethereum, bitcoin, cosmos, wallet, crypto wallet"
 				/>
 				<meta property="og:title" content="Teleport Network" />
 				<meta
 					property="og:description"
-					content="Teleport,Evmos,Teleport Chain,Cross-chain Bridge,Multi-Chain,Token Transfer"
+					content="Teleport,Evmos,Teleport Chain,Cross-chain Bridge,Multi-Chain,Token Transfer,blockchain, crypto, web3, bridge, cross-chain, ethereum, bitcoin, cosmos, wallet, crypto wallet"
 				/>
 				<meta property="og:type" content="website" />
 				<meta property="og:site_name" content="Teleport Network" />
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
 					content="2OFRwzykwoKPyUADzZ9JCA4jED2l5zZy31Q5lFsaHes"
 				/>
 				<meta name="google-site-verification" content="lix4hrWneSKRDr7ooDLj1wz3tuRDo1Zitxm_WAJZ8nY" />
-				<title>Teleport: Teleport Network, Teleport Bridge, Multi-Chain, | Teleport</title>
+				<title>Teleport Network, Teleport Bridge, Multi-Chain</title>
 				<link rel="icon" href="/teleport.png" />
 			</Head>
 			<Component {...pageProps} />
