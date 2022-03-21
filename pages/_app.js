@@ -16,12 +16,12 @@ function MyApp({ Component, pageProps }) {
 				/>
 				<meta
 					name="description"
-					content="Teleport,Evmos,Teleport Network,Cross-chain Bridge,Multi-Chain,Token Transfer,blockchain, crypto, web3, bridge, cross-chain, ethereum, bitcoin, cosmos, wallet, crypto wallet"
+					content="Teleport network is a Web3 Interoperability Platform dedicated to building the infrastructure and framework for frictionless cross-chain communications between disparate blockchain networks."
 				/>
 				<meta property="og:title" content="Teleport Network" />
 				<meta
 					property="og:description"
-					content="Teleport,Evmos,Teleport Chain,Cross-chain Bridge,Multi-Chain,Token Transfer,blockchain, crypto, web3, bridge, cross-chain, ethereum, bitcoin, cosmos, wallet, crypto wallet"
+					content="Teleport network is a Web3 Interoperability Platform dedicated to building the infrastructure and framework for frictionless cross-chain communications between disparate blockchain networks."
 				/>
 				<meta property="og:type" content="website" />
 				<meta property="og:site_name" content="Teleport Network" />
@@ -30,7 +30,7 @@ function MyApp({ Component, pageProps }) {
 					content="2OFRwzykwoKPyUADzZ9JCA4jED2l5zZy31Q5lFsaHes"
 				/>
 				<meta name="google-site-verification" content="lix4hrWneSKRDr7ooDLj1wz3tuRDo1Zitxm_WAJZ8nY" />
-				<title>Teleport Network, Teleport Bridge, Multi-Chain</title>
+				<title>Teleport Network</title>
 				<link rel="icon" href="/teleport.png" />
 			</Head>
 			<Component {...pageProps} />
