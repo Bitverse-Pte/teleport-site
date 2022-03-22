@@ -392,13 +392,12 @@ const Teleport = () => {
 			</div>
 			<div className="bannerView">
 				<div className="centerView ">
-					<div className="title title1">Interoperability Platform</div>
-					<div className="title title2">for Web3.0</div>
+					<h3 className="title title1">Interoperability Platform</h3>
+					<h3 className="title title2">for Web3.0</h3>
 					{/* <div className="title title3 topMove">for WEB3</div> */}
-					<div className="subTitle">
-						{/* An ecosystem for multi-chain assets & <br></br>  cross-chain transactions */}
+					<h4 className="subTitle">
 						Accelerate crypto assets & dApps to multi-chain
-					</div>
+					</h4>
 					<div>
 						<a
 							className="bannerBtn2 topMove"
