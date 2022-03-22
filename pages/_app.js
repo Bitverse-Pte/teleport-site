@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
 				/> */}
 				<meta
 					name="keywords"
-					content="Teleport network is a Web3 Interoperability Platform dedicated to building the infrastructure and framework for frictionless cross-chain communications between disparate blockchain networks."
+					content="Teleport Network is a Web3 Interoperability Platform dedicated to building the infrastructure and framework for frictionless cross-chain communications between disparate blockchain networks."
 				/>
 				<meta
 					name="description"

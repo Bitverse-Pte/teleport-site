@@ -216,7 +216,7 @@ const Teleport = () => {
 	}
 
 	const docMenu = (
-		<div className="communityView">
+		<nav className="communityView">
 			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
 				<a className="media" onClick={() => clickDocTeleport()}>
@@ -228,10 +228,10 @@ const Teleport = () => {
 					Chain
 				</a>
 			</div>
-		</div>
+		</nav>
 	)
 	const exploreMenu = (
-		<div className="communityView">
+		<nav className="communityView">
 			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
 				<a className="media" onClick={() => clickExploreEvm()}>
@@ -243,10 +243,10 @@ const Teleport = () => {
 					Tendermint
 				</a>
 			</div>
-		</div>
+		</nav>
 	)
 	const fauctMenu = (
-		<div className="communityView">
+		<nav className="communityView">
 			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
 				<a className="media" onClick={() => clickFauctRinkeby()}>
@@ -258,7 +258,7 @@ const Teleport = () => {
 					BSC Testnet
 				</a>
 			</div>
-		</div>
+		</nav>
 	)
 
 	const clickCommunityTwitter = () => {
@@ -286,7 +286,7 @@ const Teleport = () => {
 		window.open("https://medium.com/@TeleportNetwork", "_blank")
 	}
 	const menu = (
-		<div className="communityView">
+		<nav className="communityView">
 			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
 				<img src={"/imgs/nav_twitter.png"} alt="Teleport Network" />
@@ -312,7 +312,7 @@ const Teleport = () => {
 					Medium
 				</a>
 			</div>
-		</div>
+		</nav>
 	)
 
 	const clickLaunchApp = () => {
@@ -369,11 +369,11 @@ const Teleport = () => {
 						<Dropdown
 							className="dropdown"
 							overlay={menu}
-							// trigger={['click']}
+						// trigger={['click']}
 						>
 							<a
 								className="ant-dropdown-link"
-								// onClick={e => e.preventDefault()}
+							// onClick={e => e.preventDefault()}
 							>
 								Community
 								<img
@@ -385,9 +385,13 @@ const Teleport = () => {
 						</Dropdown>
 						{/* <span className="doc">Docs</span> */}
 						{/* <span className="languages">Languages</span> */}
-						<a className="launchApp" onClick={() => clickLaunchApp()}>
-							Launch App
-						</a>
+						<div style={{display: 'inline-block'}}>
+							<nav>
+								<a className="launchApp" onClick={() => clickLaunchApp()}>
+									Launch App
+								</a>
+							</nav>
+						</div>
 					</div>
 				</div>
 			</div>
