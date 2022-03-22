@@ -48,24 +48,21 @@ export const HomeStyled = styled.div`
 				margin-right: 0.9rem;
 				font-weight: 500;
 			}
-			.launchApp {
-				display: inline-block;
-				text-align: center;
-				padding: 0 0.245rem;
-				height: 0.47rem;
-				line-height: 0.47rem;
-				background: #00c6a9;
-				border-radius: 8px;
-				color: #ffffff;
-				font-weight: bold;
-				font-size: 0.2rem;
-			}
-			.launchApp:hover {
-				background: #00c6a9;
-				color: #ffffff;
-				cursor: pointer;
-				font-weight: bold;
-			}
+		}
+		.launchApp {
+			display: inline-block;
+			text-align: center;
+			padding: 0 0.245rem;
+			height: 0.47rem;
+			line-height: 0.47rem;
+			background: #00c6a9;
+			border-radius: 8px;
+			color: #ffffff;
+			font-weight: bold;
+			font-size: 0.2rem;
+		}
+		.launchApp:hover {
+			opacity: 0.9;
 		}
 	}
 	.bannerView {

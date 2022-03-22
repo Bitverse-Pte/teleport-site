@@ -328,7 +328,7 @@ const Teleport = () => {
     <div onClick={e => sensorHelper.track('getCode',{name:"right"})}>right</div>
     <div onClick={e => sensorHelper.track('getCode',{name:"bottom"})}>bottom</div>
     <div onClick={e => sensorHelper.track('getCode',{name:"left"})}>left</div> */}
-			<div className={["headView", headViewMove].join(" ")}>
+			<header className={["headView", headViewMove].join(" ")}>
 				<div className="centerView   dflexRowBetweenCenter">
 					<div className="logo">
 						<img className="logoImg1" src={"/imgs/logo1.png"} alt="Teleport Network" />
@@ -394,7 +394,7 @@ const Teleport = () => {
 						</div>
 					</div>
 				</div>
-			</div>
+			</header>
 			<div className="bannerView">
 				<div className="centerView ">
 					<h3 className="title title1">Interoperability Platform</h3>
