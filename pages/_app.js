@@ -10,18 +10,22 @@ function MyApp({ Component, pageProps }) {
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="title" content="Teleport Network" />
-				<meta
+				{/* <meta
 					name="keywords"
 					content="Teleport,Evmos,Teleport Network,Cross-chain Bridge,Multi-Chain,Token Transfer,blockchain, crypto, web3, bridge, cross-chain, ethereum, bitcoin, cosmos, wallet, crypto wallet"
+				/> */}
+				<meta
+					name="keywords"
+					content="Teleport network is a Web3 Interoperability Platform dedicated to building the infrastructure and framework for frictionless cross-chain communications between disparate blockchain networks."
 				/>
 				<meta
 					name="description"
-					content="Teleport network is a Web3 Interoperability Platform dedicated to building the infrastructure and framework for frictionless cross-chain communications between disparate blockchain networks."
+					content="Teleport Network is a Web3 Interoperability Platform dedicated to building the infrastructure and framework for frictionless cross-chain communications between disparate blockchain networks."
 				/>
 				<meta property="og:title" content="Teleport Network" />
 				<meta
 					property="og:description"
-					content="Teleport network is a Web3 Interoperability Platform dedicated to building the infrastructure and framework for frictionless cross-chain communications between disparate blockchain networks."
+					content="Teleport Network is a Web3 Interoperability Platform dedicated to building the infrastructure and framework for frictionless cross-chain communications between disparate blockchain networks."
 				/>
 				<meta property="og:type" content="website" />
 				<meta property="og:site_name" content="Teleport Network" />

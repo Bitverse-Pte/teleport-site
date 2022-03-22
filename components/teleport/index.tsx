@@ -217,7 +217,7 @@ const Teleport = () => {
 
 	const docMenu = (
 		<div className="communityView">
-			<img className="arrow" src={"/imgs/top_arrow.png"} alt="" />
+			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
 				<a className="media" onClick={() => clickDocTeleport()}>
 					Teleport
@@ -232,7 +232,7 @@ const Teleport = () => {
 	)
 	const exploreMenu = (
 		<div className="communityView">
-			<img className="arrow" src={"/imgs/top_arrow.png"} alt="" />
+			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
 				<a className="media" onClick={() => clickExploreEvm()}>
 					EVM
@@ -247,7 +247,7 @@ const Teleport = () => {
 	)
 	const fauctMenu = (
 		<div className="communityView">
-			<img className="arrow" src={"/imgs/top_arrow.png"} alt="" />
+			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
 				<a className="media" onClick={() => clickFauctRinkeby()}>
 					Rinkeby
@@ -287,27 +287,27 @@ const Teleport = () => {
 	}
 	const menu = (
 		<div className="communityView">
-			<img className="arrow" src={"/imgs/top_arrow.png"} alt="" />
+			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
-				<img src={"/imgs/nav_twitter.png"} alt="" />
+				<img src={"/imgs/nav_twitter.png"} alt="Teleport Network" />
 				<a className="media" onClick={() => clickCommunityTwitter()}>
 					Twitter
 				</a>
 			</div>
 			<div className="communityViewItem" key="1">
-				<img src={"/imgs/nav_telegram.png"} alt="" />
+				<img src={"/imgs/nav_telegram.png"} alt="Teleport Network" />
 				<a className="media" onClick={() => clickCommunityTelegram()}>
 					Telegram
 				</a>
 			</div>
 			<div className="communityViewItem" key="2">
-				<img src={"/imgs/nav_discord.png"} alt="" />
+				<img src={"/imgs/nav_discord.png"} alt="Teleport Network" />
 				<a className="media" onClick={() => clickCommunityDiscord()}>
 					Discord
 				</a>
 			</div>
 			<div className="communityViewItem" key="3">
-				<img src={"/imgs/nav_medium.png"} alt="" />
+				<img src={"/imgs/nav_medium.png"} alt="Teleport Network" />
 				<a className="media" onClick={() => clickCommunityMedium()}>
 					Medium
 				</a>
@@ -331,8 +331,9 @@ const Teleport = () => {
 			<div className={["headView", headViewMove].join(" ")}>
 				<div className="centerView   dflexRowBetweenCenter">
 					<div className="logo">
-						<img className="logoImg1" src={"/imgs/logo1.png"} alt="" />
-						<img className="logoImg" src={"/imgs/logo.jpg"} alt="" />
+						<img className="logoImg1" src={"/imgs/logo1.png"} alt="Teleport Network" />
+						<img className="logoImg" src={"/imgs/logo.jpg"} alt="Teleport Network" />
+						<h1 className="mainTitle">Teleport Network</h1>
 					</div>
 					<div className="rightNav">
 						<Dropdown className="dropdown" overlay={docMenu}>
@@ -341,7 +342,7 @@ const Teleport = () => {
 								<img
 									className="dropdown_arrow"
 									src={"/imgs/dropdown_arrow.png"}
-									alt=""
+									alt="Teleport Network"
 								/>
 							</a>
 						</Dropdown>
@@ -351,7 +352,7 @@ const Teleport = () => {
 								<img
 									className="dropdown_arrow"
 									src={"/imgs/dropdown_arrow.png"}
-									alt=""
+									alt="Teleport Network"
 								/>
 							</a>
 						</Dropdown>
@@ -361,7 +362,7 @@ const Teleport = () => {
 								<img
 									className="dropdown_arrow"
 									src={"/imgs/dropdown_arrow.png"}
-									alt=""
+									alt="Teleport Network"
 								/>
 							</a>
 						</Dropdown>
@@ -378,7 +379,7 @@ const Teleport = () => {
 								<img
 									className="dropdown_arrow"
 									src={"/imgs/dropdown_arrow.png"}
-									alt=""
+									alt="Teleport Network"
 								/>
 							</a>
 						</Dropdown>
@@ -409,23 +410,23 @@ const Teleport = () => {
 
 					<div className="contactView">
 						{/* <div className="contactItem topMove">
-            <img src={twitter} alt="" />
+            <img src={twitter} alt="Teleport Network" />
           </div>
           <div className="contactItem topMove">
-            <img src={tg} alt="" />
+            <img src={tg} alt="Teleport Network" />
           </div>
           <div className="contactItem topMove">
-            <img src={mSvg} alt="" />
+            <img src={mSvg} alt="Teleport Network" />
           </div>
           <div className="contactItem topMove">
-            <img src={email} alt="" />
+            <img src={email} alt="Teleport Network" />
           </div> */}
 					</div>
 				</div>
 			</div>
 			<div className={["aboutView", aboutViewAnimate].join(" ")}>
 				<div className="centerView">
-					<div className="title ">Teleport Features</div>
+					<h2 className="title ">Teleport Features</h2>
 					<div className="table dflexRowStartStart">
 						<div className="cell dflex1 ">
 							<div>
@@ -465,24 +466,24 @@ const Teleport = () => {
 			</div>
 			<div className={["bridgeView", bridgeViewAnimate].join(" ")}>
 				<div className="centerView">
-					<div className="title dmb20">
-						<div>Teleport Bridge</div>
+					<div className="dmb20">
+						<h2 className="title">Teleport Bridge</h2>
 					</div>
-					<div className="subtitle">Cross-chain Token Transfer</div>
+					<h3 className="subtitle">Cross-chain Token Transfer</h3>
 					<div className="sendToView dflexRowStartCenter">
 						<div className={["dflexColumnStartCenter", sendAnimate].join(" ")}>
 							<img
 								className="sendImg dmb20"
 								src={sendIcons[sendLoopIndex]}
-								alt=""
+								alt="Teleport Network"
 							/>
 							<div className="chainName">{bridgeSends[sendLoopIndex]}</div>
 						</div>
 						<div>
-							<img className="sendToImg" src={"/imgs/sendTo.svg"} alt="" />
+							<img className="sendToImg" src={"/imgs/sendTo.svg"} alt="Teleport Network" />
 						</div>
 						<div className={["dflexColumnStartCenter", toAnimate].join(" ")}>
-							<img className="toImg dmb20" src={toIcons[toLoopIndex]} alt="" />
+							<img className="toImg dmb20" src={toIcons[toLoopIndex]} alt="Teleport Network" />
 							<div className="chainName">{bridgeTos[toLoopIndex]}</div>
 						</div>
 						<div className="dflex1"></div>
@@ -493,31 +494,31 @@ const Teleport = () => {
 				<div className="centerView dflexRowEndCenter">
 					<div className="dflex1"></div>
 					<div className="dflex1">
-						<div className="title">Teleswap</div>
-						<div className="subtitle subtitle1 ">
+						<h2 className="title">Teleswap</h2>
+						<p className="subtitle subtitle1 ">
 							Cross-chain liquidity aggregator{" "}
 							<span className="addView dml10"></span>
-						</div>
-						<div className="subtitle ">
+						</p>
+						<p className="subtitle ">
 							Token swap between any chains{" "}
 							<span className="addView dml10"></span>
-						</div>
+						</p>
 					</div>
 				</div>
 			</div>
 			<div className={["metaView", metaAnimate].join(" ")}>
 				<div className="centerView dflexRowEndCenter">
 					<div className="dflex1">
-						<div className="title ">Metaverse Hub</div>
+						<h2 className="title ">Metaverse Hub</h2>
 						<div className="desc dflexRowStartStart">
 							<span
 								className="addView dmr20"
-								style={{ position: "relative", top: "1.2rem" }}
+								style={{ position: "relative", top: ".1rem" }}
 							></span>
-							<div>
+							<p>
 								First EVM-compatible relay chain <br></br> for DeFi, NFT, and
 								game
-							</div>
+							</p>
 						</div>
 					</div>
 					<div className="dflex1"></div>
@@ -525,7 +526,7 @@ const Teleport = () => {
 			</div>
 			<div className="roadmapView animate__animated animate__fadeInUp">
 				<div className="centerView">
-					<div className="roadmapTitle">Teleport Roadmap</div>
+					<h2 className="roadmapTitle">Teleport Roadmap</h2>
 				</div>
 			</div>
 			<div className={["roadmapLineView", roadmapLineViewAnimate].join(" ")}>
@@ -632,9 +633,9 @@ const Teleport = () => {
 			</div>
 			<div className="bottomView animate__animated animate__fadeInUp">
 				<div className="centerView dflexRowBetweenCenter">
-					<div className="right">
+					<p className="right">
 						©2022 Teleport Network. All rights reserved.
-					</div>
+					</p>
 					{/* <div>© 2019 - 2020 Byvrese. All Rights Reserved.</div> */}
 					<div className="contactView">
 						<a
