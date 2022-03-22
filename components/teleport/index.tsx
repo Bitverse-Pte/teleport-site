@@ -583,11 +583,7 @@ const Teleport = () => {
 										<span className="roadmapRoundNo"></span> EVM chain support
 									</div>
 									<div>
-										<span className="roadmapRound"></span> Cross-chain relayer
-										Incentive
-									</div>
-									<div>
-										<span className="roadmapRoundNo"></span> Program
+										<span className="roadmapRound"></span> Liquidity incentive program
 									</div>
 									<div>
 										<span className="roadmapRound"></span> Multi-chain wallet
