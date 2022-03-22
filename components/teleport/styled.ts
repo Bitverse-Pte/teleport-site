@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
 export const HomeStyled = styled.div`
+	.mainTitle {
+		color: transparent;
+		display: inline-block;
+	}
 	padding-top: 1rem;
 	.topMove:hover {
 		position: relative;
@@ -212,12 +216,10 @@ export const HomeStyled = styled.div`
 		padding-top: 2.1rem;
 		.title {
 			margin-bottom: 0.2rem;
-			> div {
-				line-height: 0.7rem;
-				font-weight: bold;
-				font-size: 0.66rem;
-				color: #ffffff;
-			}
+			line-height: 0.7rem;
+			font-weight: bold;
+			font-size: 0.66rem;
+			color: #ffffff;
 		}
 		.subtitle {
 			margin-bottom: 0.55rem;
