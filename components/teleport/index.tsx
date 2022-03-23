@@ -540,7 +540,7 @@ const Teleport = () => {
 							</p>
 						</div>
 						<div>
-							<a className="walletDownloadBtn hoverOpacity8" href="https://chrome.google.com/webstore/detail/teleport-wallet/gkeelndblnomfmjnophbhfhcjbcnemka" target="_blank">Download</a>
+							<a className="walletDownloadBtn hoverOpacity8" rel="noreferrer" href="https://chrome.google.com/webstore/detail/teleport-wallet/gkeelndblnomfmjnophbhfhcjbcnemka" target="_blank">Download</a>
 						</div>
 					</div>
 					<div className="dflex1"></div>
