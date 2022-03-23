@@ -268,6 +268,14 @@ html body {
 .dflex4 {
 	flex: 4 !important;
 }
+.dflex5 {
+	flex: 5 !important;
+}
+.dflex6 {
+	flex: 6 !important;
+	border: 1px solid red;
+}
+
 
 .dtal {
 	text-align: left !important;
@@ -479,4 +487,12 @@ html body {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+
+.hoverOpacity7:hover {
+	opacity: 0.7 !important;
+}
+.hoverOpacity8:hover {
+	opacity: 0.8 !important;
 }

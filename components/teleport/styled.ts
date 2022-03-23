@@ -293,9 +293,54 @@ export const HomeStyled = styled.div`
 			margin-bottom: 0.18rem;
 		}
 	}
+	.walletView {
+		width: 100vw;
+		height: 11.19rem;
+		background-image: url("/imgs/home_bg5_wallet.png");
+		background-size: 100% 100%;
+		padding-top: 4.2rem;
+		text-align: left;
+		.leftView {
+			margin-left: 1rem;
+		}
+		.teleswapIcon {
+			width: 15.5rem;
+			height: 17.8rem;
+		}
+		.title {
+			font-weight: bold;
+			font-weight: 700;
+			font-size: 0.66rem;
+			color: #ffffff;
+			margin-bottom: 0.1rem;
+		}
+		.subtitle {
+			font-size: 0.26rem;
+			line-height: 0.36rem;
+			text-align: right;
+			letter-spacing: 0.06em;
+			color: #ffffff;
+			opacity: 0.8;
+		}
+		.subtitle1 {
+			margin-bottom: 0.18rem;
+		}
+		.walletDownloadBtn {
+			margin: .3rem 0 0 .3rem;
+			display: inline-block;
+			width: 1.77rem;
+			line-height: .47rem;
+			text-align: center;
+			background: #00C6A9;
+			border-radius: .08rem;
+			color: #FFFFFF;
+			font-weight: 400;
+			font-size: .22rem;
+		}
+	}
 	.metaView {
 		width: 100vw;
-		height: 9.5rem;
+		height: 9.44rem;
 		background-image: url("/imgs/home_bg5-1.png");
 		background-size: 100% 100%;
 		padding-top: 3.5rem;
@@ -308,12 +353,24 @@ export const HomeStyled = styled.div`
 			margin-bottom: 0.16rem;
 		}
 		.desc {
-			width: 5.12rem;
+			line-height: .36rem;
+			font-weight: 400;
 			font-size: 0.26rem;
-			line-height: 0.36rem;
 			letter-spacing: 0.06em;
 			color: #ffffff;
 			opacity: 0.8;
+			margin: 0;
+		}
+		.subtitle {
+			font-size: 0.26rem;
+			line-height: 0.27rem;
+			text-align: right;
+			letter-spacing: 0.06em;
+			color: #ffffff;
+			opacity: 0.8;
+		}
+		.subtitle1 {
+			margin-bottom: 0.18rem;
 		}
 	}
 	.roadmapView {
@@ -350,7 +407,7 @@ export const HomeStyled = styled.div`
 			margin-right: 0.1rem;
 		}
 		.roadItem {
-			height: 7.33rem;
+			height: 3.6rem;
 			font-weight: normal;
 			color: #ffffff;
 			color: rgba(255, 255, 255, 0.8);
@@ -360,9 +417,14 @@ export const HomeStyled = styled.div`
 					color: #03c7ab;
 					margin-bottom: 0.1rem;
 					font-weight: bold;
+					margin-left: .18rem;
 				}
 				.desc {
 					font-size: 0.18rem;
+					opacity: 0.7;
+					font-size: .18rem;
+					color: #FFFFFF;
+
 				}
 			}
 			.roadItemCtt:hover {

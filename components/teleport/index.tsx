@@ -6,11 +6,11 @@ import { setTimeout } from "timers"
 
 const Teleport = () => {
 	let sensorsClent: any
-	let swap_hub_roadMap = [0, 0, 0]
 	const [aboutViewAnimate, setaboutViewAnimate] = useState("")
 	const [bridgeViewAnimate, setBridgeViewAnimate] = useState("")
 	const [teleswapAnimate, setTeleswapAnimate] = useState("")
 	const [metaAnimate, setMetaAnimate] = useState("")
+	const [walletAnimate, setWalletAnimate] = useState("second")
 	const [roadmapLineViewAnimate, setRoadmapLineViewAnimate] = useState("")
 	const [sendAnimate, setSendAnimate] = useState("")
 	const [toAnimate, setToAnimate] = useState("")
@@ -43,10 +43,9 @@ const Teleport = () => {
 	]
 	let [sendLoopIndex, setSendLoopIndex] = useState(0)
 	let [toLoopIndex, setToLoopIndex] = useState(0)
-	let pageEnds = [1, 1, 1, 1, 1, 1]
+	let pageEndsTicket = [1, 1, 1, 1, 1, 1, 1, 1, 1]
 
 	useEffect(() => {
-		// sensorHelper.track('autoTrack2222')
 		const skynet = require("utils/skynet")
 		sensorsClent = skynet.default.sensors
 
@@ -87,74 +86,81 @@ const Teleport = () => {
 		}
 		const aboutView: any = document.getElementsByClassName("aboutView")[0]
 		if (
-			pageEnds[0] &&
+			pageEndsTicket[0] &&
 			aboutView &&
 			aboutView.offsetTop &&
 			scrollTop >= aboutView.offsetTop - 800
 		) {
 			setaboutViewAnimate("animate__animated animate__fadeInUp")
-			pageEnds[0] = 0
+			pageEndsTicket[0] = 0
 		}
 		const bridgeView: any = document.getElementsByClassName("bridgeView")[0]
 		if (
-			pageEnds[1] &&
+			pageEndsTicket[1] &&
 			bridgeView &&
 			bridgeView.offsetTop &&
 			scrollTop >= bridgeView.offsetTop - 800
 		) {
 			setBridgeViewAnimate("animate__animated animate__fadeInUp")
-			pageEnds[1] = 0
+			pageEndsTicket[1] = 0
 		}
 		const teleswap: any = document.getElementsByClassName("teleswap")[0]
 		if (
-			pageEnds[2] &&
+			pageEndsTicket[2] &&
 			teleswap &&
 			teleswap.offsetTop &&
 			scrollTop >= teleswap.offsetTop - 800
 		) {
 			setTeleswapAnimate("animate__animated animate__fadeInUp")
-			pageEnds[2] = 0
-		}
-		if (!swap_hub_roadMap[0] && scrollTop >= teleswap.offsetTop - 800) {
 			sensorsClent.track("Teleswap_view", {
 				page: "home",
 			})
-			swap_hub_roadMap[0] = 1
+			pageEndsTicket[2] = 0
 		}
+
+		const walletView: any = document.getElementsByClassName("walletView")[0]
+		if (
+			pageEndsTicket[3] &&
+			walletView &&
+			walletView.offsetTop &&
+			scrollTop >= walletView.offsetTop - 800
+		) {
+			setWalletAnimate("animate__animated animate__fadeInUp")
+			sensorsClent.track("walletView_view", {
+				page: "home",
+			})
+			pageEndsTicket[3] = 0
+		}
+
 		const metaView: any = document.getElementsByClassName("metaView")[0]
 		if (
-			pageEnds[3] &&
+			pageEndsTicket[4] &&
 			metaView &&
 			metaView.offsetTop &&
 			scrollTop >= metaView.offsetTop - 800
 		) {
 			setMetaAnimate("animate__animated animate__fadeInUp")
-			pageEnds[3] = 0
-		}
-		if (!swap_hub_roadMap[1] && scrollTop >= metaView.offsetTop - 800) {
 			sensorsClent.track("MetaverseHub_view", {
 				page: "home",
 			})
-			swap_hub_roadMap[1] = 1
+			pageEndsTicket[4] = 0
 		}
 
 		const roadmapLineView: any =
 			document.getElementsByClassName("roadmapLineView")[0]
 		if (
-			pageEnds[4] &&
+			pageEndsTicket[5] &&
 			roadmapLineView &&
 			roadmapLineView.offsetTop &&
 			scrollTop >= roadmapLineView.offsetTop - 800
 		) {
 			setRoadmapLineViewAnimate("animate__animated animate__fadeInUp")
-			pageEnds[4] = 0
-		}
-		if (!swap_hub_roadMap[2] && scrollTop >= roadmapLineView.offsetTop - 800) {
 			sensorsClent.track("Roadmap_view", {
 				page: "home",
 			})
-			swap_hub_roadMap[2] = 1
+			pageEndsTicket[5] = 0
 		}
+		
 		const bottomView: any = document.getElementsByClassName("bottomView")[0]
 		if (
 			bottomView &&
@@ -165,6 +171,7 @@ const Teleport = () => {
 			setBridgeViewAnimate("")
 			setTeleswapAnimate("")
 			setMetaAnimate("")
+			setWalletAnimate("")
 			setRoadmapLineViewAnimate("")
 			window.removeEventListener("scroll", handleScroll)
 		}
@@ -385,7 +392,7 @@ const Teleport = () => {
 						</Dropdown>
 						{/* <span className="doc">Docs</span> */}
 						{/* <span className="languages">Languages</span> */}
-						<div style={{display: 'inline-block'}}>
+						<div style={{ display: 'inline-block' }}>
 							<nav>
 								<a className="launchApp" onClick={() => clickLaunchApp()}>
 									Launch App
@@ -510,22 +517,53 @@ const Teleport = () => {
 					</div>
 				</div>
 			</div>
-			<div className={["metaView", metaAnimate].join(" ")}>
-				<div className="centerView dflexRowEndCenter">
-					<div className="dflex1">
-						<h2 className="title ">Metaverse Hub</h2>
+			<div className={["walletView", walletAnimate].join(" ")}>
+				<div className="centerView dflexRowStartCenter">
+					<div className="dflex1 leftView">
+						<h2 className="title ">Teleport Wallet</h2>
 						<div className="desc dflexRowStartStart">
 							<span
 								className="addView dmr20"
 								style={{ position: "relative", top: ".1rem" }}
 							></span>
-							<p>
-								First EVM-compatible relay chain <br></br> for DeFi, NFT, and
-								game
+							<p className="subtitle">
+								Multi-Chain & Multi-Identity supported
 							</p>
+						</div>
+						<div className="desc dflexRowStartStart">
+							<span
+								className="addView dmr20"
+								style={{ position: "relative", top: ".1rem" }}
+							></span>
+							<p className="subtitle">
+								Ethereum, Cosmos, Polkadot, Solana <br /> token transfers and dApp interaction
+							</p>
+						</div>
+						<div>
+							<a className="walletDownloadBtn hoverOpacity8" href="https://chrome.google.com/webstore/detail/teleport-wallet/gkeelndblnomfmjnophbhfhcjbcnemka" target="_blank">Download</a>
 						</div>
 					</div>
 					<div className="dflex1"></div>
+				</div>
+			</div>
+			<div className={["metaView", metaAnimate].join(" ")}>
+				<div className="centerView dflexRowEndCenter">
+					<div className="dflex1">
+					</div>
+					<div className="dflex1">
+						<h2 className="title ">Metaverse Hub</h2>
+						<div className="desc dflexRowStartStart">
+							<p className="subtitle subtitle1 ">
+								First EVM-compatible relay chain
+								<span className="addView dml10"></span>
+							</p>
+						</div>
+						<div className="desc dflexRowStartStart">
+							<p className="subtitle subtitle1 ">
+								for DeFi, NFT, and game
+							</p>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div className="roadmapView animate__animated animate__fadeInUp">
@@ -535,9 +573,8 @@ const Teleport = () => {
 			</div>
 			<div className={["roadmapLineView", roadmapLineViewAnimate].join(" ")}>
 				<div className="centerView">
-					<div className="dflexRowCenterCenter">
-						<div className="dflex1"></div>
-						<div className="dflex5 roadItem roadItem1  dflexColumnStartCenter">
+					<div className="dflexRowCenterCenter dmb30">
+						<div className="dflex1 roadItem roadItem1  dflexColumnStartCenter">
 							<div className="roadItemCtt">
 								<div className="title">2021 Q4</div>
 								<div className="desc">
@@ -554,25 +591,7 @@ const Teleport = () => {
 								</div>
 							</div>
 						</div>
-						<div className="dflex5 roadItem roadItem2 dflexColumnEndCenter">
-							<div className="roadItemCtt">
-								<div className="title">2022 Q1</div>
-								<div className="desc">
-									<div>
-										<span className="roadmapRound"></span> Testnet launch
-									</div>
-									<div>
-										<span className="roadmapRound"></span> Cross-chain transfer
-										&
-									</div>
-									<div>
-										<span className="roadmapRoundNo"></span> contract call via
-										light client or TSS
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="dflex5 roadItem roadItem3 dflexColumnStartCenter">
+						<div className="dflex1 roadItem roadItem3 dflexColumnStartCenter">
 							<div className="roadItemCtt">
 								<div className="title">2022 Q2</div>
 								<div className="desc">
@@ -592,7 +611,45 @@ const Teleport = () => {
 								</div>
 							</div>
 						</div>
-						<div className="dflex5 roadItem roadItem4 dflexColumnEndCenter">
+						<div className="dflex1 roadItem roadItem5 dflexColumnStartCenter">
+							<div className="roadItemCtt">
+								<div className="title">2022 Q4</div>
+								<div className="desc">
+									<div>
+										<span className="roadmapRound"></span> TSS Node on-chain
+									</div>
+									<div>
+										<span className="roadmapRoundNo"></span> governance
+									</div>
+									<div>
+										<span className="roadmapRound"></span> Multi-chain Namespace
+										& Identity{" "}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="dflexRowCenterCenter" style={{ marginTop: "1.2rem" }}>
+						<div className="dflex2"></div>
+						<div className="dflex3 roadItem roadItem2 dflexColumnEndCenter">
+							<div className="roadItemCtt">
+								<div className="title">2022 Q1</div>
+								<div className="desc">
+									<div>
+										<span className="roadmapRound"></span> Testnet launch
+									</div>
+									<div>
+										<span className="roadmapRound"></span> Cross-chain transfer
+										&
+									</div>
+									<div>
+										<span className="roadmapRoundNo"></span> contract call via
+										light client or TSS
+									</div>
+								</div>
+							</div>
+						</div>
+						<div className="dflex3 roadItem roadItem4 dflexColumnEndCenter">
 							<div className="roadItemCtt">
 								<div className="title">2022 Q3</div>
 								<div className="desc">
@@ -606,23 +663,6 @@ const Teleport = () => {
 									</div>
 									<div>
 										<span className="roadmapRound"></span> Plug & play SDK
-									</div>
-								</div>
-							</div>
-						</div>
-						<div className="dflex5 roadItem roadItem5 dflexColumnStartCenter">
-							<div className="roadItemCtt">
-								<div className="title">2022 Q4</div>
-								<div className="desc">
-									<div>
-										<span className="roadmapRound"></span> TSS Node on-chain
-									</div>
-									<div>
-										<span className="roadmapRoundNo"></span> governance
-									</div>
-									<div>
-										<span className="roadmapRound"></span> Multi-chain Namespace
-										& Identity{" "}
 									</div>
 								</div>
 							</div>
