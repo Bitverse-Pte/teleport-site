@@ -1,6 +1,12 @@
 import styled from "styled-components"
 
 export const HomeStyled = styled.div`
+	.walletBtn {
+		color: #FFFFFF;
+		font-weight: 400;
+		font-size: .22rem;
+		margin-right: .5rem;
+	}
 	.mainTitle {
 		color: transparent;
 		display: inline-block;

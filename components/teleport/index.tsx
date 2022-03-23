@@ -160,7 +160,7 @@ const Teleport = () => {
 			})
 			pageEndsTicket[5] = 0
 		}
-		
+
 		const bottomView: any = document.getElementsByClassName("bottomView")[0]
 		if (
 			bottomView &&
@@ -181,7 +181,7 @@ const Teleport = () => {
 		sensorsClent.track("doc_teleport_click", {
 			page: "home",
 		})
-		window.open("https://docs.teleport.network", "_blank")
+		// window.open("https://docs.teleport.network", "_blank")
 	}
 	const clickDocChain = () => {
 		sensorsClent.track("doc_chain_click", {
@@ -226,7 +226,7 @@ const Teleport = () => {
 		<nav className="communityView">
 			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
-				<a className="media" onClick={() => clickDocTeleport()}>
+				<a className="media" href="https://docs.teleport.network" target="_blank" onClick={() => clickDocTeleport()}>
 					Teleport
 				</a>
 			</div>
@@ -328,13 +328,37 @@ const Teleport = () => {
 		})
 		window.open("https://bridge.testnet.teleport.network", "_blank")
 	}
-
+	const clickWalletDownload = () => {
+		alert(1)
+		sensorsClent.track("walle_download_click", {
+			page: "home",
+		})
+	}
+	const scrollAnimation = (currentY: number, targetY: number) => {
+		let needScrollTop = targetY - currentY
+		let _currentY = currentY
+		setTimeout(() => {
+			const dist = Math.ceil(needScrollTop / 10)
+			_currentY += dist
+			window.scrollTo(0, _currentY)
+			if (needScrollTop > 10 || needScrollTop < -10) {
+				scrollAnimation(_currentY, targetY)
+			} else {
+				window.scrollTo(_currentY, targetY)
+			}
+		}, 10)
+	}
+	const clickWallet = (e: any) => {
+		const currentY = document.documentElement.scrollTop || document.body.scrollTop;
+		const walletViewDiv: any = document.querySelector("#walletViewID")
+		let offsetTop: number = walletViewDiv.offsetTop || 0
+		console.log(currentY, offsetTop)
+		if (offsetTop) {
+			scrollAnimation(currentY, offsetTop)
+		}
+	}
 	return (
 		<HomeStyled>
-			{/* <div onClick={e => sensorHelper.track('getCode',{name:"top"})}>top</div>
-    <div onClick={e => sensorHelper.track('getCode',{name:"right"})}>right</div>
-    <div onClick={e => sensorHelper.track('getCode',{name:"bottom"})}>bottom</div>
-    <div onClick={e => sensorHelper.track('getCode',{name:"left"})}>left</div> */}
 			<header className={["headView", headViewMove].join(" ")}>
 				<div className="centerView   dflexRowBetweenCenter">
 					<div className="logo">
@@ -390,8 +414,8 @@ const Teleport = () => {
 								/>
 							</a>
 						</Dropdown>
-						{/* <span className="doc">Docs</span> */}
 						{/* <span className="languages">Languages</span> */}
+						<a className="walletBtn hoverOpacity8" onClick={clickWallet}>Wallet</a>
 						<div style={{ display: 'inline-block' }}>
 							<nav>
 								<a className="launchApp" onClick={() => clickLaunchApp()}>
@@ -517,7 +541,7 @@ const Teleport = () => {
 					</div>
 				</div>
 			</div>
-			<div className={["walletView", walletAnimate].join(" ")}>
+			<div id="walletViewID" className={["walletView", walletAnimate].join(" ")}>
 				<div className="centerView dflexRowStartCenter">
 					<div className="dflex1 leftView">
 						<h2 className="title ">Teleport Wallet</h2>
@@ -540,7 +564,7 @@ const Teleport = () => {
 							</p>
 						</div>
 						<div>
-							<a className="walletDownloadBtn hoverOpacity8" rel="noreferrer" href="https://chrome.google.com/webstore/detail/teleport-wallet/gkeelndblnomfmjnophbhfhcjbcnemka" target="_blank">Download</a>
+							<a className="walletDownloadBtn hoverOpacity8" rel="noreferrer" href="https://chrome.google.com/webstore/detail/teleport-wallet/gkeelndblnomfmjnophbhfhcjbcnemka" onClick={clickWalletDownload} target="_blank">Download</a>
 						</div>
 					</div>
 					<div className="dflex1"></div>
