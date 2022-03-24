@@ -329,7 +329,6 @@ const Teleport = () => {
 		window.open("https://bridge.testnet.teleport.network", "_blank")
 	}
 	const clickWalletDownload = () => {
-		alert(1)
 		sensorsClent.track("walle_download_click", {
 			page: "home",
 		})
