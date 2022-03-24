@@ -226,7 +226,7 @@ const Teleport = () => {
 		<nav className="communityView">
 			<img className="arrow" src={"/imgs/top_arrow.png"} alt="Teleport Network" />
 			<div className="communityViewItem" key="0">
-				<a className="media" href="https://docs.teleport.network" target="_blank" onClick={() => clickDocTeleport()}>
+				<a className="media" href="https://docs.teleport.network" rel="noreferrer" target="_blank" onClick={() => clickDocTeleport()}>
 					Teleport
 				</a>
 			</div>
