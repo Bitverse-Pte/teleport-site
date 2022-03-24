@@ -364,7 +364,6 @@ const Teleport = () => {
 					<div className="logo">
 						<img className="logoImg1" src={"/imgs/logo1.png"} alt="Teleport Network" />
 						<img className="logoImg" src={"/imgs/logo.jpg"} alt="Teleport Network" />
-						<h1 className="mainTitle">Teleport Network</h1>
 					</div>
 					<div className="rightNav">
 						<Dropdown className="dropdown" overlay={docMenu}>
@@ -428,6 +427,7 @@ const Teleport = () => {
 			</header>
 			<div className="bannerView">
 				<div className="centerView ">
+					<h1 className="mainTitle">Teleport Network</h1>
 					<h3 className="title title1">Interoperability Platform</h3>
 					<h3 className="title title2">for Web3.0</h3>
 					{/* <div className="title title3 topMove">for WEB3</div> */}
