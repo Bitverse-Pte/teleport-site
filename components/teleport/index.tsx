@@ -358,7 +358,7 @@ const Teleport = () => {
 	}
 	return (
 		<HomeStyled>
-			<header className={["headView", headViewMove].join(" ")}>
+			<div className={["headView", headViewMove].join(" ")}>
 				<div className="centerView   dflexRowBetweenCenter">
 					<div className="logo">
 						<img className="logoImg1" src={"/imgs/logo1.png"} alt="Teleport Network" />
@@ -423,6 +423,22 @@ const Teleport = () => {
 						</div>
 					</div>
 				</div>
+			</div>
+			<header className="headerNavView"> 
+				<nav>
+					<a  href="https://docs.teleport.network" rel="noreferrer" target="_blank">Teleport</a>
+					<a  href="https://chain-docs.teleport.network" rel="noreferrer" target="_blank">Chain</a>
+					<a  href="https://rinkeby-erc20-faucet.testnet.teleport.network" rel="noreferrer" target="_blank">Rinkeby</a>
+					<a  href="https://bsctest-erc20-faucet.testnet.teleport.network" rel="noreferrer" target="_blank">BSC Testnet</a>
+					<a  href="https://evm-explorer.testnet.teleport.network" rel="noreferrer" target="_blank">Evm</a>
+					<a  href="https://explorer.testnet.teleport.network" rel="noreferrer" target="_blank">Tendermint</a>
+					<a  href="https://bridge.testnet.teleport.network" rel="noreferrer" target="_blank">Tendermint</a>
+					<a  href="https://twitter.com/TeleportChain" rel="noreferrer" target="_blank">Twitter</a>
+					<a  href="https://t.me/TeleportNetwork" rel="noreferrer" target="_blank">Telegram</a>
+					<a  href="https://discord.com/invite/5YQtRDF4Rh" rel="noreferrer" target="_blank">Discord</a>
+					<a  href="https://medium.com/@TeleportNetwork" rel="noreferrer" target="_blank">Medium</a>
+					<a  href="https://chrome.google.com/webstore/detail/teleport-wallet/gkeelndblnomfmjnophbhfhcjbcnemka" rel="noreferrer" target="_blank">Medium</a>
+				</nav>
 			</header>
 			<div className="bannerView">
 				<div className="centerView ">

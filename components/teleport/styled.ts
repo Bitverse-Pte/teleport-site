@@ -11,7 +11,6 @@ export const HomeStyled = styled.div`
 		color: transparent;
 		display: inline-block;
 	}
-	padding-top: 1rem;
 	.topMove:hover {
 		position: relative;
 		top: -4px;
@@ -21,7 +20,12 @@ export const HomeStyled = styled.div`
 		box-shadow: 0px 9px 10px rgba(0, 0, 0, 0.08) !important;
 		backdrop-filter: blur(20px) !important;
 	}
-
+	.headerNavView {
+		height: 1rem;
+		a { 
+			color: black;
+		}
+	}
 	.headView {
 		position: fixed;
 		top: 0;
@@ -76,7 +80,7 @@ export const HomeStyled = styled.div`
 		height: 8.4rem;
 		background-image: url("/imgs/home_bg2.png");
 		background-size: 100% 100%;
-		padding-top: 1.67rem;
+		/* padding-top: 1.67rem; */
 		.title {
 			font-weight: 600;
 			font-size: 0.6rem;
