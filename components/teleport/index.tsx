@@ -450,7 +450,9 @@ const Teleport = () => {
 						Accelerate crypto assets & dApps to multi-chain
 					</h4>
 					<div>
-						<a
+						<a 
+							href="https://docs.teleport.network"
+							rel="noreferrer" target="_blank"
 							className="bannerBtn2 topMove"
 							onClick={() => clickDocTeleport()}
 						>
