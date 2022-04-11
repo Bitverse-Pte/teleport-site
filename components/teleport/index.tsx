@@ -183,6 +183,12 @@ const Teleport = () => {
 		})
 		// window.open("https://docs.teleport.network", "_blank")
 	}
+	const clickWhitePageTeleport = () => {
+		sensorsClent.track("whitepaper_click", {
+			page: "home",
+		})
+		// window.open("https://docs.teleport.network", "_blank")
+	}
 	const clickDocChain = () => {
 		sensorsClent.track("doc_chain_click", {
 			page: "home",
@@ -453,10 +459,18 @@ const Teleport = () => {
 						<a 
 							href="https://docs.teleport.network"
 							rel="noreferrer" target="_blank"
-							className="bannerBtn2 topMove"
+							className="bannerBtn2 topMove dmr20"
 							onClick={() => clickDocTeleport()}
 						>
 							Docs
+						</a>
+						<a 
+							href="https://static-files.teleport.network/whitepaper/Teleport_Whitepaper_v1.0.pdf"
+							rel="noreferrer" target="_blank"
+							className="bannerBtn2 topMove"
+							onClick={() => clickWhitePageTeleport()}
+						>
+							Whitepaper 
 						</a>
 					</div>
 

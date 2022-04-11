@@ -90,7 +90,6 @@ export const MobileStyled = styled.div`
 			text-align: center;
 			font-size: 0.14rem;
 			color: #ffffff;
-			margin-right: 0.2rem;
 			background-color: rgba(2, 5, 5, 1);
 			border: 1px solid rgba(255, 255, 255, 1);
 		}

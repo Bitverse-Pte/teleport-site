@@ -179,6 +179,11 @@ const Mobile = () => {
 		})
 		window.open("https://docs.teleport.network", "_blank")
 	}
+	const clickWhitePageTeleport = () => {
+		sensorsClient.track("whitepaper_click", {
+			page: "home",
+		})
+	}
 	const clickExploreEvm = () => {
 		sensorsClient.track("explore_evm_click", {
 			page: "home",
@@ -272,10 +277,18 @@ const Mobile = () => {
 					<div>
 						{/* <span className="bannerBtn1 topMoveMobile">Docs</span> */}
 						<a
-							className="bannerBtn1 topMoveMobile"
+							className="bannerBtn1 topMoveMobile dmr20"
 							onClick={() => clickDocTeleport()}
 						>
 							Docs
+						</a>
+						<a 
+							href="https://static-files.teleport.network/whitepaper/Teleport_Whitepaper_v1.0.pdf"
+							rel="noreferrer" target="_blank"
+							className="bannerBtn1 topMove"
+							onClick={() => clickWhitePageTeleport()}
+						>
+							Whitepaper 
 						</a>
 					</div>
 				</div>
