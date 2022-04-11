@@ -58,6 +58,6 @@ Home.getInitialProps = async ({ req }: any) => {
 	)) {
 		isMobile = true
 	}
-	console.log("isMobile", isMobile)
+	console.log("isMobile 1", isMobile)
 	return { isMobile }
 }
