@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 const Teleport = dynamic(import("../components/teleport"))
 const Mobile = dynamic(import("../components/mobile"))
 
-export default function Home({ isMobile }: any) {
+export default function Home() {
 	const [showPc, setShowPc] = useState(true)
 	const [showLoading, setShowLoading] = useState(true)
 	const init = async () => {
@@ -12,14 +12,12 @@ export default function Home({ isMobile }: any) {
 	}
 
 	useEffect(() => {
-		console.log("client isMobile", isMobile)
 		require('common/rem.js')
-		// if (
-		// 	window.navigator.userAgent.match(
-		// 		/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i,
-		// 	)
-		// )
-		if (isMobile) {
+		if (
+			window.navigator.userAgent.match(
+				/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i,
+			)
+		){
 			setTimeout(() => {
 				setShowPc(false)
 				setShowLoading(false)
@@ -50,15 +48,4 @@ export default function Home({ isMobile }: any) {
 			{showPc && <Teleport></Teleport>}
 		</>
 	)
-}
-Home.getInitialProps = async ({ req }: any) => {
-	let userAgent = req?.headers && req?.headers['user-agent'] || "";
-	let isMobile = false
-	if (userAgent && userAgent.match(
-		/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i,
-	)) {
-		isMobile = true
-	}
-	console.log("isMobile 1", isMobile)
-	return { isMobile }
 }
