@@ -12,6 +12,7 @@ export default function Home({ isMobile }: any) {
 	}
 
 	useEffect(() => {
+		console.log("client isMobile", isMobile)
 		require('common/rem.js')
 		// if (
 		// 	window.navigator.userAgent.match(
